@@ -64,7 +64,7 @@ class Board {
         row = n->get_info().get_point().get_x();
       }
 
-      std::cout << static_cast<int> (n->get_info().get_mod()) << " ";
+      std::cout << static_cast<int> (n->get_info().get_mod()) << "  ";
     });
     std::cout << "\n";
   }
