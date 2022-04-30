@@ -2,3 +2,5 @@
 *.exe
 *.dot
 *.o
+test
+*.a

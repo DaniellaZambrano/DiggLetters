@@ -59,12 +59,13 @@ class Board {
   {
     int row = 0;
     this->game_board.for_each_node([&](BoardGraph::Node* n) {
-      if (n->get_info().get_point().get_y() > row) {
+      if (n->get_info().get_point().get_x() > row) {
         std::cout << "\n";
-        row = n->get_info().get_point().get_y();
+        row = n->get_info().get_point().get_x();
       }
 
-      std::cout << static_cast<int>(n->get_info().get_mod()) << " ";
+    // std::cout << '(' << n->get_info().get_point().get_x() << "," << n->get_info().get_point().get_y() << ')' << " " << static_cast<int> (n->get_info().get_mod()) << " ";
+      std::cout << static_cast<int> (n->get_info().get_mod()) << " ";
     });
   }
 };
