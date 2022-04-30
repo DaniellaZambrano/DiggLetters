@@ -10,10 +10,10 @@ using namespace Designar;
 
 enum class Modifier {
     NORMAL,
-    TRIPLE_WORD,
     DOUBLE_WORD,
-    TRIPLE_LETTER,
-    DOUBLE_LETTER
+    TRIPLE_WORD,
+    DOUBLE_LETTER,
+    TRIPLE_LETTER
 };
 
 class Square {
@@ -46,9 +46,24 @@ public:
         return this->mod;
     }
 
+    void set_mod(Modifier m)
+    {
+        this->mod = m;
+    }
+
     const Point2D& get_point() const
     {
         return this->p;
+    }
+
+    void set_point(Point2D& p)
+    {
+        this->p = p;
+    }
+
+    void set_point(Point2D&& p)
+    {
+        this->p = p;
     }
 
 };
