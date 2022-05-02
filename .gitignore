@@ -1,2 +1,6 @@
-.gitignore
 .vscode
+*.exe
+*.dot
+*.o
+test
+*.a
