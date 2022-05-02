@@ -40,6 +40,7 @@ class Board {
 
   private:
   BoardGraph game_board;
+  std::string word;
 
   public:
   Board()
