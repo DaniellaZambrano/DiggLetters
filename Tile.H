@@ -22,12 +22,9 @@ public:
 
     ~Tile(){}
 
-    char get_letter(int pos)
-    {
-        if (pos < 0 || pos > NUM_LETTERS)
-            return '?';
-            
-        return this->letter[pos];
+    char get_letter()
+    {           
+        return this->letter;
     }
 
     int get_value(char l)

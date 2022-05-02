@@ -14,7 +14,7 @@ using namespace Designar;
 
 class Player
 {
-private:
+protected:
     int score = 0;
     std::vector<std::shared_ptr<Tile>> rack;
 
