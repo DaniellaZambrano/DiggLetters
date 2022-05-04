@@ -4,14 +4,9 @@
 #include <bits/stdc++.h>
 
 #include "Square.H"
-#include "buildgraph.H"
-#include "graph.H"
 
 const unsigned int BOARD_SIZE = 15;
-const unsigned int OFFSET = 100;
-
-using namespace Designar;
-using BoardGraph = Graph<Square>;
+const unsigned int OFFSET = 1;
 
 Modifier get_mod(unsigned x, unsigned y)
 {
@@ -39,36 +34,21 @@ Modifier get_mod(unsigned x, unsigned y)
 class Board {
 
   private:
-  BoardGraph game_board;
+  Square game_board[BOARD_SIZE][BOARD_SIZE];
   std::string word;
 
   public:
   Board()
   {
-    this->game_board = build_grid<BoardGraph>(
-        BOARD_SIZE, BOARD_SIZE,
-        [&](BoardGraph::Node* n, nat_t j, nat_t i) {
-          n->get_info().set_point(Point2D(j * OFFSET, i * OFFSET));
-          n->get_info().set_mod(get_mod(j, i));
-        },
-        [](BoardGraph::Arc* a){});
-  }
-
-  BoardGraph& get_graph() { return this->game_board; }
-
-  void test_board()
-  {
-    int row = 0;
-    this->game_board.for_each_node([&](BoardGraph::Node* n) {
-      if (n->get_info().get_point().get_x() > row) {
-        std::cout << "\n";
-        row = n->get_info().get_point().get_x();
+    for (int i=0; i<BOARD_SIZE; i++) {
+      for (int j =0; j< BOARD_SIZE; j++) {
+        game_board[i][j].set_point(Point2D(j * OFFSET, i * OFFSET));
+        game_board[i][j].set_mod(get_mod(j, i));
       }
-
-      std::cout << static_cast<int> (n->get_info().get_mod()) << "  ";
-    });
-    std::cout << "\n";
+    }
   }
+
+  auto get_graph() { return this->game_board; }
 };
 
 #endif

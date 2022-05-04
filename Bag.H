@@ -65,7 +65,7 @@ public:
 
 		std::shared_ptr<Tile> ret_tile = this->tiles[random_tile];
 
-        this->tiles.erase(random_tile);
+        this->tiles.erase(this->tiles.begin() + random_tile);
 		num_act_tiles--;
 
 		return ret_tile;
