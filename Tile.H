@@ -27,14 +27,9 @@ public:
         return this->letter;
     }
 
-    int get_value(char l)
+    int get_value()
     {
-        int pos = std::toupper(l) - 64;
-
-        if (l == '0')
-            pos = 0;
-
-        return this->value[pos];
+        return this->value;
     }
    
 };

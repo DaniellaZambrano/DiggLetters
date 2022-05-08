@@ -15,73 +15,73 @@ class Cnode : public MTreeNode<char>
   {
     switch (c)
       {
-      case '√°': 
-      case '√†': 
-      case '√§': 
-      case '√¢':
-      case '√£':
-      case '√Å': 
-      case '√Ä': 
-      case '√Ñ': 
-      case '√Ç':
-      case '√É':
+      case '·': 
+      case '‡': 
+      case '‰': 
+      case '‚':
+      case '„':
+      case '¡': 
+      case '¿': 
+      case 'ƒ': 
+      case '¬':
+      case '√':
         return 'a';
         break; 
 
-      case '√©': 
-      case '√®':
-      case '√´':
-      case '√™':
-      case '√â': 
-      case '√à':
-      case '√ã':
-      case '√ä':
+      case 'È': 
+      case 'Ë':
+      case 'Î':
+      case 'Í':
+      case '…': 
+      case '»':
+      case 'À':
+      case ' ':
         return 'e';
         break; 
 
-      case '√≠': 
-      case '√¨':
-      case '√Ø':
-      case '√Æ':
-      case '√ç': 
-      case '√å':
-      case '√è':
-      case '√é':
+      case 'Ì': 
+      case 'Ï':
+      case 'Ô':
+      case 'Ó':
+      case 'Õ': 
+      case 'Ã':
+      case 'œ':
+      case 'Œ':
         return 'i';
         break; 
 
-      case '√≥':
-      case '√≤':
-      case '√∂':
-      case '√¥':
-      case '√µ':
-      case '√ì':
-      case '√í':
-      case '√ñ':
-      case '√î':
-      case '√ï':
+      case 'Û':
+      case 'Ú':
+      case 'ˆ':
+      case 'Ù':
+      case 'ı':
+      case '”':
+      case '“':
+      case '÷':
+      case '‘':
+      case '’':
         return 'o';
         break; 
 
-      case '√∫': 
-      case '√π':
-      case '√º':
-      case '√ª':
-      case '√ö': 
-      case '√ô':
-      case '√ú':
-      case '√õ':
+      case '˙': 
+      case '˘':
+      case '¸':
+      case '˚':
+      case '⁄': 
+      case 'Ÿ':
+      case '‹':
+      case '€':
         return 'u';
         break;
 
-      case '√ß':
-      case '√á':
+      case 'Á':
+      case '«':
         return 'c';
         break;
  
-      case '√ë':
-      case '√±':
-        return '√±';
+      case '—':
+      case 'Ò':
+        return 'Ò';
         break;
 
       case 'A' ... 'Z' : 
@@ -101,73 +101,73 @@ class Cnode : public MTreeNode<char>
   {
     switch (c)
       {
-      case '√°': 
-      case '√†': 
-      case '√§': 
-      case '√¢':
-      case '√£':
-      case '√Å': 
-      case '√Ä': 
-      case '√Ñ': 
-      case '√Ç':
-      case '√É':
+      case '·': 
+      case '‡': 
+      case '‰': 
+      case '‚':
+      case '„':
+      case '¡': 
+      case '¿': 
+      case 'ƒ': 
+      case '¬':
+      case '√':
         return 'a';
         break; 
 
-      case '√©': 
-      case '√®':
-      case '√´':
-      case '√™':
-      case '√â': 
-      case '√à':
-      case '√ã':
-      case '√ä':
+      case 'È': 
+      case 'Ë':
+      case 'Î':
+      case 'Í':
+      case '…': 
+      case '»':
+      case 'À':
+      case ' ':
         return 'e';
         break; 
 
-      case '√≠': 
-      case '√¨':
-      case '√Ø':
-      case '√Æ':
-      case '√ç': 
-      case '√å':
-      case '√è':
-      case '√é':
+      case 'Ì': 
+      case 'Ï':
+      case 'Ô':
+      case 'Ó':
+      case 'Õ': 
+      case 'Ã':
+      case 'œ':
+      case 'Œ':
         return 'i';
         break; 
 
-      case '√≥':
-      case '√≤':
-      case '√∂':
-      case '√¥':
-      case '√µ':
-      case '√ì':
-      case '√í':
-      case '√ñ':
-      case '√î':
-      case '√ï':
+      case 'Û':
+      case 'Ú':
+      case 'ˆ':
+      case 'Ù':
+      case 'ı':
+      case '”':
+      case '“':
+      case '÷':
+      case '‘':
+      case '’':
         return 'o';
         break; 
 
-      case '√∫': 
-      case '√π':
-      case '√º':
-      case '√ª':
-      case '√ö': 
-      case '√ô':
-      case '√ú':
-      case '√õ':
+      case '˙': 
+      case '˘':
+      case '¸':
+      case '˚':
+      case '⁄': 
+      case 'Ÿ':
+      case '‹':
+      case '€':
         return 'u';
         break;
 
-      case '√ß':
-      case '√á':
+      case 'Á':
+      case '«':
         return 'c';
         break;
 
-      case '√ë':
-      case '√±':
-        return '√±';
+      case '—':
+      case 'Ò':
+        return 'Ò';
         break;
 
       case 'A' ... 'Z' : 
@@ -324,6 +324,7 @@ public:
 	    const Cnode * pp = get<0>(p);
 	    char * rem = const_cast<char*>(get<1>(p));
       if (*rem == '\0')
+	    {
 	      if (pp->is_end_word())
 	        return false;
 	      else
@@ -331,6 +332,7 @@ public:
 	          const_cast<Cnode*>(pp)->mark_end_word();
 	          return true;
 	        }
+	    }
 
 	    // revisar caracteres v√°lidos del resto de la palabra
 	    for (char *ptr = rem; *ptr; ptr++)
