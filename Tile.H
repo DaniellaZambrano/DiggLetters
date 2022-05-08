@@ -34,7 +34,7 @@ public:
         if (l == '0')
             pos = 0;
 
-        return this->value[pos];
+        return this->value;
     }
    
 };

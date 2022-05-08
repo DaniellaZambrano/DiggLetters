@@ -71,6 +71,11 @@ public:
 		return ret_tile;
 	}
 
+	unsigned int get_tiles_count() const
+	{
+		return this->tiles.size();
+	}
+
 	void test_bag()
 	{
 		std::cout << "Tiles in Bag" << '\n';
