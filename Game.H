@@ -3,13 +3,12 @@
 
 #define UNUSED(name) (void)name;
 
-#include "Cnode.H"
 #include "Board.H"
+#include "Cnode.H"
 #include "Player.H"
 #include "Scrabot.H"
 
-
-const unsigned int NUM_TILES = 7;
+const unsigned int NUM_TILES_IN_RACK = 7;
 const unsigned int NUM_PLAYERS = 2;
 
 class Game {
@@ -24,7 +23,8 @@ class Game {
   unsigned int current_player = 0;
 
   public:
-  Game() : prefix_tree('$')
+  Game()
+      : prefix_tree('$')
   {
     // Fill the players
     for (int i = 0; i < NUM_PLAYERS; i++) {
@@ -41,7 +41,7 @@ class Game {
     unsigned int starter = choose_starter_player();
 
     // Run turns sequentially until the bag is out tiles and no further plays can be done.
-    
+
     start_match(starter);
   }
 
@@ -51,7 +51,8 @@ class Game {
 
   void greet_players()
   {
-    // In case of a Graphical Interface, initial animations can be done here, after all resources are properly loaded
+    // In case of a Graphical Interface, initial animations can be done here, after all resources
+    // are properly loaded
     std::cout << "Welcome to DiggLetters!"
               << "\n";
   }
@@ -74,7 +75,7 @@ class Game {
 
       // Draw a full hand, if not already full
 
-      int missing_tiles = NUM_TILES - player->get_tiles_rack();
+      int missing_tiles = NUM_TILES_IN_RACK - player->get_tiles_rack();
 
       player->fill_rack(missing_tiles, bag);
 
@@ -90,17 +91,19 @@ class Game {
     }
   }
 
-  void before_turn() 
+  void before_turn()
   {
-    // This executes before every turn, both checking available plays and playing animations can be done here
-    std::cout << "Now its Player " << current_player + 1 << " turn.";
+    // This executes before every turn, both checking available plays and playing animations can be
+    // done here
+    std::cout << "Now its Player " << current_player + 1 << " turn."
+              << "\n";
   }
 
-  void after_turn() 
+  void after_turn()
   {
     // This executes after every turn, both score checking and playing animations can be done here
-    std::cout << "Player " << current_player + 1 << " turn ended.";
-
+    std::cout << "Player " << current_player + 1 << " turn ended."
+              << "\n";
   }
 };
 
