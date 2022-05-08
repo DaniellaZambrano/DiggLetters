@@ -34,8 +34,8 @@ struct compare_tiles {
 } cmp_tiles;
 
 struct compare_as_set {
-  bool operator()(
-      std::vector<std::shared_ptr<Tile>>& rhs, std::vector<std::shared_ptr<Tile>>& lhs) const
+  bool operator()(const
+      std::vector<std::shared_ptr<Tile>>& rhs, const std::vector<std::shared_ptr<Tile>>& lhs) const
   {
     return std::lexicographical_compare(rhs.begin(), rhs.end(), lhs.begin(), lhs.end(), cmp_tiles);
   }

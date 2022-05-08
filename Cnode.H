@@ -324,6 +324,7 @@ public:
 	    const Cnode * pp = get<0>(p);
 	    char * rem = const_cast<char*>(get<1>(p));
       if (*rem == '\0')
+	    {
 	      if (pp->is_end_word())
 	        return false;
 	      else
@@ -331,6 +332,7 @@ public:
 	          const_cast<Cnode*>(pp)->mark_end_word();
 	          return true;
 	        }
+	    }
 
 	    // revisar caracteres válidos del resto de la palabra
 	    for (char *ptr = rem; *ptr; ptr++)
