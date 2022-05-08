@@ -44,6 +44,7 @@ public:
 
     void play(Cnode& tree)
     {
+        UNUSED(tree)
        // Get input to make a play, be it console input, or clicks to select tiles and squares on the board 
     }
 };

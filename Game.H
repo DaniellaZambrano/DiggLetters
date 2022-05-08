@@ -1,13 +1,16 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
+#define UNUSED(name) (void)name;
+
 #include "Cnode.H"
 #include "Board.H"
 #include "Player.H"
 #include "Scrabot.H"
 
-#define NUM_TILES 7
-#define NUM_PLAYERS 2
+
+const unsigned int NUM_TILES = 7;
+const unsigned int NUM_PLAYERS = 2;
 
 class Game {
 

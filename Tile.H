@@ -1,9 +1,8 @@
 #ifndef _TILE_H_
 #define _TILE_H_
 
-#include <iostream>
+const unsigned int NUM_LETTERS = 28;
 
-#define NUM_LETTERS 28
 
 class Tile {
 
@@ -27,13 +26,8 @@ public:
         return this->letter;
     }
 
-    int get_value(char l)
+    int get_value()
     {
-        int pos = std::toupper(l) - 64;
-
-        if (l == '0')
-            pos = 0;
-
         return this->value;
     }
    

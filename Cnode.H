@@ -11,77 +11,77 @@ using namespace Designar;
 
 class Cnode : public MTreeNode<char>
 {
-  static char filter_char(const char c)
+  static char filter_char(const int c)
   {
     switch (c)
       {
-      case '√°': 
-      case '√†': 
-      case '√§': 
-      case '√¢':
-      case '√£':
-      case '√Å': 
-      case '√Ä': 
-      case '√Ñ': 
-      case '√Ç':
-      case '√É':
+      case '·': 
+      case '‡': 
+      case '‰': 
+      case '‚':
+      case '„':
+      case '¡': 
+      case '¿': 
+      case 'ƒ': 
+      case '¬':
+      case '√':
         return 'a';
         break; 
 
-      case '√©': 
-      case '√®':
-      case '√´':
-      case '√™':
-      case '√â': 
-      case '√à':
-      case '√ã':
-      case '√ä':
+      case 'È': 
+      case 'Ë':
+      case 'Î':
+      case 'Í':
+      case '…': 
+      case '»':
+      case 'À':
+      case ' ':
         return 'e';
         break; 
 
-      case '√≠': 
-      case '√¨':
-      case '√Ø':
-      case '√Æ':
-      case '√ç': 
-      case '√å':
-      case '√è':
-      case '√é':
+      case 'Ì': 
+      case 'Ï':
+      case 'Ô':
+      case 'Ó':
+      case 'Õ': 
+      case 'Ã':
+      case 'œ':
+      case 'Œ':
         return 'i';
         break; 
 
-      case '√≥':
-      case '√≤':
-      case '√∂':
-      case '√¥':
-      case '√µ':
-      case '√ì':
-      case '√í':
-      case '√ñ':
-      case '√î':
-      case '√ï':
+      case 'Û':
+      case 'Ú':
+      case 'ˆ':
+      case 'Ù':
+      case 'ı':
+      case '”':
+      case '“':
+      case '÷':
+      case '‘':
+      case '’':
         return 'o';
         break; 
 
-      case '√∫': 
-      case '√π':
-      case '√º':
-      case '√ª':
-      case '√ö': 
-      case '√ô':
-      case '√ú':
-      case '√õ':
+      case '˙': 
+      case '˘':
+      case '¸':
+      case '˚':
+      case '⁄': 
+      case 'Ÿ':
+      case '‹':
+      case '€':
         return 'u';
         break;
 
-      case '√ß':
-      case '√á':
+      case 'Á':
+      case '«':
         return 'c';
         break;
  
-      case '√ë':
-      case '√±':
-        return '√±';
+      case '—':
+      case 'Ò':
+        return 'Ò';
         break;
 
       case 'A' ... 'Z' : 
@@ -97,77 +97,77 @@ class Cnode : public MTreeNode<char>
       }
   }
 
-  static char fast_filter_char(const char c)
+  static char fast_filter_char(const int c)
   {
     switch (c)
       {
-      case '√°': 
-      case '√†': 
-      case '√§': 
-      case '√¢':
-      case '√£':
-      case '√Å': 
-      case '√Ä': 
-      case '√Ñ': 
-      case '√Ç':
-      case '√É':
+      case '·': 
+      case '‡': 
+      case '‰': 
+      case '‚':
+      case '„':
+      case '¡': 
+      case '¿': 
+      case 'ƒ': 
+      case '¬':
+      case '√':
         return 'a';
         break; 
 
-      case '√©': 
-      case '√®':
-      case '√´':
-      case '√™':
-      case '√â': 
-      case '√à':
-      case '√ã':
-      case '√ä':
+      case 'È': 
+      case 'Ë':
+      case 'Î':
+      case 'Í':
+      case '…': 
+      case '»':
+      case 'À':
+      case ' ':
         return 'e';
         break; 
 
-      case '√≠': 
-      case '√¨':
-      case '√Ø':
-      case '√Æ':
-      case '√ç': 
-      case '√å':
-      case '√è':
-      case '√é':
+      case 'Ì': 
+      case 'Ï':
+      case 'Ô':
+      case 'Ó':
+      case 'Õ': 
+      case 'Ã':
+      case 'œ':
+      case 'Œ':
         return 'i';
         break; 
 
-      case '√≥':
-      case '√≤':
-      case '√∂':
-      case '√¥':
-      case '√µ':
-      case '√ì':
-      case '√í':
-      case '√ñ':
-      case '√î':
-      case '√ï':
+      case 'Û':
+      case 'Ú':
+      case 'ˆ':
+      case 'Ù':
+      case 'ı':
+      case '”':
+      case '“':
+      case '÷':
+      case '‘':
+      case '’':
         return 'o';
         break; 
 
-      case '√∫': 
-      case '√π':
-      case '√º':
-      case '√ª':
-      case '√ö': 
-      case '√ô':
-      case '√ú':
-      case '√õ':
+      case '˙': 
+      case '˘':
+      case '¸':
+      case '˚':
+      case '⁄': 
+      case 'Ÿ':
+      case '‹':
+      case '€':
         return 'u';
         break;
 
-      case '√ß':
-      case '√á':
+      case 'Á':
+      case '«':
         return 'c';
         break;
 
-      case '√ë':
-      case '√±':
-        return '√±';
+      case '—':
+      case 'Ò':
+        return 'Ò';
         break;
 
       case 'A' ... 'Z' : 
@@ -278,8 +278,8 @@ public:
       return make_tuple(this, "");
 
     Cnode * p = search_child(fast_filter_char(*prefix));
-    if (p == nullptr) // encontr√≥ *prefix?
-      return make_tuple(this, prefix); // No! ==> llegamos hasta aqu√≠
+    if (p == nullptr) // encontrÛ *prefix?
+      return make_tuple(this, prefix); // No! ==> llegamos hasta aquÌ
 
     return p->search_prefix(prefix + 1);
   }
@@ -332,7 +332,7 @@ public:
 	          return true;
 	        }
 
-	    // revisar caracteres v√°lidos del resto de la palabra
+	    // revisar caracteres v·lidos del resto de la palabra
 	    for (char *ptr = rem; *ptr; ptr++)
 	      {
 	        *ptr = filter_char(*ptr);
