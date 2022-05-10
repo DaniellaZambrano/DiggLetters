@@ -11,6 +11,7 @@
 
 using namespace Designar;
 
+using LetterInBoard = std::pair<Tile*, std::pair<int, int>>;
 
 class Player
 {
@@ -42,10 +43,12 @@ public:
         return;
     }
 
-    void play(Cnode& tree)
+    std::vector<LetterInBoard> play(Cnode& tree, Board& board)
     {
         UNUSED(tree)
-       // Get input to make a play, be it console input, or clicks to select tiles and squares on the board 
+        UNUSED(board)
+        // Get input to make a play, be it console input, or clicks to select tiles and squares on the board 
+        return {};
     }
 };
 

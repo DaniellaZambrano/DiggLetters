@@ -24,8 +24,9 @@ public:
     Scrabot(){}
     ~Scrabot(){}
 
-    void play(Cnode& tree)
+    std::vector<LetterInBoard> play(Cnode& tree, Board& board)
     {
+        UNUSED(board)
         std::string letters;
 
         for (auto tile : this->rack)
@@ -35,7 +36,7 @@ public:
 
         words_generator(letters, tree);
         
-        
+        return {};
     }
 
     std::vector<std::pair<Tile, Point2D>> get_plays(Cnode& tree, Board& board) 

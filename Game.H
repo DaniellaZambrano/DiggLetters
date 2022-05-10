@@ -81,7 +81,7 @@ class Game {
 
       // Make a play
 
-      player->play(prefix_tree);
+      player->play(prefix_tree, board);
 
       // Next player's turn
 
