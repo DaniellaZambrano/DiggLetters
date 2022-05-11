@@ -25,10 +25,10 @@ private:
 
 public:
 	
-    Square() : mod(Modifier::NORMAL), tile(nullptr)
+    Square() : tile(nullptr), mod(Modifier::NORMAL) 
     {}
 
-    Square(Point2D& p, Tile* t, Modifier mod) : mod(mod), tile(t), p(p)
+    Square(Point2D& p, Tile* t, Modifier mod) : p(p), tile(t), mod(mod)  
     {}
 
 	Tile* get_tile()

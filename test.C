@@ -1,9 +1,9 @@
-#include "Board.H"
+#include <iostream>
+#include "Game.H"
 
 int main() {
 
-    Board a;
-    a.test_board();
+    Game game;
 
     return 0;
 }

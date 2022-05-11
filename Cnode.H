@@ -11,7 +11,7 @@ using namespace Designar;
 
 class Cnode : public MTreeNode<char>
 {
-  static char filter_char(const char c)
+  static char filter_char(const int c)
   {
     switch (c)
       {
@@ -97,7 +97,7 @@ class Cnode : public MTreeNode<char>
       }
   }
 
-  static char fast_filter_char(const char c)
+  static char fast_filter_char(const int c)
   {
     switch (c)
       {
@@ -278,8 +278,8 @@ public:
       return make_tuple(this, "");
 
     Cnode * p = search_child(fast_filter_char(*prefix));
-    if (p == nullptr) // encontr√≥ *prefix?
-      return make_tuple(this, prefix); // No! ==> llegamos hasta aqu√≠
+    if (p == nullptr) // encontrÛ *prefix?
+      return make_tuple(this, prefix); // No! ==> llegamos hasta aquÌ
 
     return p->search_prefix(prefix + 1);
   }
@@ -334,7 +334,7 @@ public:
 	        }
 	    }
 
-	    // revisar caracteres v√°lidos del resto de la palabra
+	    // revisar caracteres v·lidos del resto de la palabra
 	    for (char *ptr = rem; *ptr; ptr++)
 	      {
 	        *ptr = filter_char(*ptr);

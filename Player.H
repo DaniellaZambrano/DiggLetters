@@ -41,6 +41,14 @@ public:
 
         return;
     }
+
+    Play play(Cnode& tree, Board& board)
+    {
+        UNUSED(tree)
+        UNUSED(board)
+        // Get input to make a play, be it console input, or clicks to select tiles and squares on the board 
+        return {};
+    }
 };
 
 

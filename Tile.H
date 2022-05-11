@@ -1,9 +1,8 @@
 #ifndef _TILE_H_
 #define _TILE_H_
 
-#include <iostream>
+const unsigned int NUM_LETTERS = 28;
 
-#define NUM_LETTERS 28
 
 class Tile {
 

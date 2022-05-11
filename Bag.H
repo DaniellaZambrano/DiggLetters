@@ -5,8 +5,7 @@
 
 #include "Tile.H"
 
-#define NUM_TILES 100
-#define NUM_LETTERS 28
+const unsigned int NUM_TILES = 100;
 
 class Bag {
 
@@ -24,7 +23,6 @@ public:
 	
     Bag()
     {
-		int pos = 0;
 		for (int i = 0; i < NUM_LETTERS; i++)
 		{
 			for (int j = 0; j < frequency[i]; j++)
@@ -69,6 +67,11 @@ public:
 		num_act_tiles--;
 
 		return ret_tile;
+	}
+
+	unsigned int get_tiles_count() const
+	{
+		return this->tiles.size();
 	}
 
 	void test_bag()
