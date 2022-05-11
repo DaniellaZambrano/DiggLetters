@@ -103,19 +103,40 @@ private:
 
     Play get_best_play(std::vector<Play>& plays, Board& board)
     {
-      Play p;
       auto b = board.get_board();
+      int max_score = 0, score, value;
+      unsigned position_best_play, i = 0, x, y, double_word, triple_word;
+      
       for(auto aux_p : plays)
       {
-          int score;
-        for(auto square : aux_p)
+        score = value = 0;
+        double_word = triple_word = 0;
+        for(auto pair_tp : aux_p)
         {
-          int value square.second;
-          Point2D point = square.second;
+          value = pair_tp.first->get_value();
+          x = pair_tp.second.get_x() / OFFSET;
+          y = pair_tp.second.get_y() / OFFSET;
+          if(get_mod(x,y) == Modifier::DOUBLE_LETTER)
+            value *= 2;
+          else if(get_mod(x,y) == Modifier::TRIPLE_LETTER)
+            value *= 3;
+          else if(get_mod(x,y) == Modifier::DOUBLE_WORD)
+            double_word++;
+          else if(get_mod(x,y) == Modifier::TRIPLE_WORD)
+            triple_word++;
         }
+        score += score * (double_word * 2)  * (triple_word * 3);
+        if(aux_p.size() == 7)
+          score += 50;
+        if(max_score < score)
+        {        
+          max_score = score;
+          position_best_play = i;
+        }
+        i++;
       }
             
-      return p;
+      return plays[position_best_play];
     }
 
 public:
@@ -125,13 +146,14 @@ public:
 
     void set_registered_word(std::string w, int dir, Point2D p)
     {
-      this->registered_word.push_back(w,dir,p);
+      this->registered_word.push_back(std::make_tuple(w,dir,p));
     }
 
-    void play(Cnode& tree, Board& board)
+    Play play(Cnode& tree, Board& board)
     {
         auto plays {get_plays(tree,board)};
-        Play p {get_best_play(plays,board)};
+        
+        return get_best_play(plays,board);
     }
 
 
