@@ -48,7 +48,7 @@ class Board {
     }
   }
 
-  auto get_graph() { return this->game_board; }
+  auto get_board() { return this->game_board; }
 };
 
 #endif
