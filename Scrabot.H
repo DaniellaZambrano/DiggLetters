@@ -123,6 +123,11 @@ public:
     Scrabot(){}
     ~Scrabot(){}
 
+    void set_registered_word(std::string w, int dir, Point2D p)
+    {
+      this->registered_word.push_back(w,dir,p);
+    }
+
     void play(Cnode& tree, Board& board)
     {
         auto plays {get_plays(tree,board)};
