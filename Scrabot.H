@@ -11,7 +11,7 @@
 #include "point2D.H"
 
 using namespace Designar;
-using Play = std::vector<std::pair<std::shared_ptr<Tile>, Point2D>>;
+
 
 class Scrabot : public Player{
 

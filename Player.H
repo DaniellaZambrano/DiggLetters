@@ -42,7 +42,7 @@ public:
         return;
     }
 
-    std::vector<LetterInBoard> play(Cnode& tree, Board& board)
+    Play play(Cnode& tree, Board& board)
     {
         UNUSED(tree)
         UNUSED(board)

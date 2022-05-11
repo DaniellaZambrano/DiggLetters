@@ -34,13 +34,15 @@ Modifier get_mod(unsigned x, unsigned y)
 class Board {
 
   private:
-  Square game_board[BOARD_SIZE][BOARD_SIZE];
+  std::vector<std::vector<Square>> game_board;
   std::string word;
 
   public:
   Board()
   {
+    game_board.reserve(BOARD_SIZE);
     for (int i=0; i<BOARD_SIZE; i++) {
+      game_board[i].reserve(BOARD_SIZE);
       for (int j =0; j< BOARD_SIZE; j++) {
         game_board[i][j].set_point(Point2D(j * OFFSET, i * OFFSET));
         game_board[i][j].set_mod(get_mod(j, i));
