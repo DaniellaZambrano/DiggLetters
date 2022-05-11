@@ -11,7 +11,6 @@
 
 using namespace Designar;
 
-using LetterInBoard = std::pair<Tile*, std::pair<int, int>>;
 
 class Player
 {
