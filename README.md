@@ -15,7 +15,9 @@ Este repositorio contiene el proyecto de programación para la materia Analisis 
 
 La arquitectura de la implementación consiste en lo siguiente: 
 
-- S
+- En la carpeta src los archivos en código c++
+- Los .H contienen la lógica del juego en este caso basado en Scrabble
+- Los .cpp contienen la lógica para linkear con el lenguaje de godot
 
 ### Instrucciones para compilar el código
 
