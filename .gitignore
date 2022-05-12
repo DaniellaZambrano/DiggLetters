@@ -8,3 +8,4 @@ test
 venv-diggletters
 godot-cpp
 *.os
+.sconsign.dblite
