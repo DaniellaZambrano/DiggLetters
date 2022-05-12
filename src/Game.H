@@ -3,7 +3,7 @@
 
 #include "Cnode.H"
 
-#define NUM_TILES 7
+#define LETTERS_IN_RACK 7
 
 class Game{
 
