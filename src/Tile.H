@@ -1,18 +1,26 @@
-#ifndef _TILE_H_
-#define _TILE_H_
+#pragma once
+
+#include <Godot.hpp>
 
 #include <iostream>
+#include <Button.hpp>
 
 #define NUM_LETTERS 28
 
-class Tile {
+namespace godot{
+
+class Tile : public Button {
 
 private:
 
     char letter;
     int value;
  
+    GODOT_CLASS(Tile,Button)
+
 public:
+
+    Tile(){}
 
     Tile(char l, int v)
     {
@@ -21,6 +29,8 @@ public:
     }
 
     ~Tile(){}
+
+    static void _register_methods();
 
     char get_letter()
     {           
@@ -31,7 +41,12 @@ public:
     {
         return this->value;
     }
+
+    void _ready();
+    void _init();
+    void _process(float);
    
 };
 
-#endif
+}
+

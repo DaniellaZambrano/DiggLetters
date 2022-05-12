@@ -5,6 +5,8 @@
 
 #include "Tile.H"
 
+using namespace godot;
+
 #define NUM_TILES 100
 #define NUM_LETTERS 28
 
@@ -14,7 +16,7 @@ private:
 
 	std::vector<std::shared_ptr<Tile>> tiles;
 
-	char letter[NUM_LETTERS] = { '0', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+	char letter[NUM_LETTERS] = { '0', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'n', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 	int value[NUM_LETTERS] = { 0, 1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 4, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10 };
     int frequency[NUM_LETTERS] = {2, 9, 2, 2, 4, 10, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2, 1, 6, 4, 6, 4, 2, 2, 1, 2, 1, 2};
     

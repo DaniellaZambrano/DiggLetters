@@ -10,9 +10,14 @@ config_version=4
 
 [application]
 
-config/name="demo"
+config/name="game"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=600
+window/size/height=400
 
 [physics]
 
